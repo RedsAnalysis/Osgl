@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Godrej MSR City Shettigere | Price & Floor Plan</title>
+    <meta name="description" content="Godrej MSR City at Shettigere, North Bangalore. 2 & 3 BHK apartments from ₹1.59 Cr. 62-acre township near Airport Road. EOI Open.">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0f172a;
+            --accent: #d97706;
+            --whatsapp: #25D366;
+            --text-light: #f8fafc;
+            --text-dark: #334155;
+            --bg-gray: #f1f5f9;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background-color: #fff; color: var(--text-dark); line-height: 1.7; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; color: var(--primary); }
+
+        /* NAVBAR */
+        .navbar {
+            position: fixed; top: 0; width: 100%; background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px); box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 15px 5%; z-index: 1000;
+        }
+        .navbar img { height: 40px; }
+        .nav-links a { text-decoration: none; color: var(--primary); margin-left: 20px; font-weight: 500; font-size: 0.9rem; }
+        .nav-btn { background: var(--accent); color: white !important; padding: 8px 15px; border-radius: 5px; }
+
+        /* HERO */
+        .hero {
+            height: 90vh; background: linear-gradient(rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.8)), url('banner.jpg') center/cover no-repeat;
+            background-color: #1e293b; display: flex; flex-direction: column; justify-content: center; align-items: center;
+            text-align: center; color: var(--text-light); padding: 20px; margin-top: 70px;
+        }
+        .hero h1 { font-size: 4rem; color: var(--text-light); margin-bottom: 10px; }
+        .hero p { font-size: 1.2rem; font-weight: 300; margin-bottom: 20px; letter-spacing: 1px; }
+        .badge { background: var(--accent); padding: 6px 15px; border-radius: 20px; font-size: 0.9rem; font-weight: 600; margin-bottom: 20px; }
+
+        /* COMMON */
+        .section { padding: 80px 5%; max-width: 1300px; margin: 0 auto; }
+        .section-header { text-align: center; margin-bottom: 40px; }
+        .section-header h2 { font-size: 2.5rem; margin-bottom: 10px; }
+        .section-header p { color: #64748b; }
+        .btn { display: inline-block; padding: 14px 30px; border-radius: 5px; text-decoration: none; font-weight: 500; transition: 0.3s; text-align: center; }
+        .btn-wa { background: var(--whatsapp); color: white; box-shadow: 0 4px 15px rgba(37,211,102,0.3); }
+        .btn-wa:hover { background: #1eb954; transform: translateY(-2px); }
+
+        /* OVERVIEW */
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+        .highlights { list-style: none; margin-top: 20px; }
+        .highlights li { margin-bottom: 12px; padding-left: 30px; position: relative; }
+        .highlights li::before { content: "✓"; color: var(--accent); position: absolute; left: 0; font-weight: bold; }
+
+        /* PRICING */
+        .pricing-section { background: var(--bg-gray); }
+        .table-container { overflow-x: auto; background: white; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 20px 25px; text-align: left; border-bottom: 1px solid #e2e8f0; }
+        th { background: var(--primary); color: white; font-weight: 500; }
+        td strong { color: var(--accent); font-size: 1.1rem; }
+        td a { color: var(--primary); font-size: 0.8rem; text-decoration: underline; display: block; margin-top: 5px; }
+
+        /* AMENITIES */
+        .amenities-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .amenity-card { background: var(--bg-gray); padding: 20px; border-radius: 8px; text-align: center; font-weight: 500; border: 1px solid #e2e8f0; }
+
+        /* LOCATION */
+        .location-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+        .dist-list { list-style: none; }
+        .dist-list li { display: flex; justify-content: space-between; border-bottom: 1px dashed #cbd5e1; padding: 12px 0; }
+        .dist-list span { font-weight: 600; color: var(--primary); }
+        .map-placeholder { background: url('location.jpg') center/cover, var(--bg-gray); height: 400px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #64748b; border: 1px solid #e2e8f0;}
+
+        /* FOOTER */
+        footer { background: var(--primary); color: #94a3b8; padding: 40px 5%; text-align: center; font-size: 0.85rem; }
+        footer a { color: var(--accent); text-decoration: none; }
+        .rera { color: white; font-weight: 600; margin-bottom: 15px; font-size: 1rem; }
+
+        /* FLOATING WHATSAPP */
+        .float-wa { position: fixed; bottom: 30px; right: 30px; background: var(--whatsapp); width: 60px; height: 60px; border-radius: 50%; display: flex; justify-content: center; align-items: center; box-shadow: 0 4px 15px rgba(0,0,0,0.2); z-index: 1000; transition: 0.3s; }
+        .float-wa:hover { transform: scale(1.1); }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .grid-2, .location-grid { grid-template-columns: 1fr; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <h2 style="font-size: 1.5rem; margin:0;">GODREJ MSR CITY</h2>
+        <div class="nav-links">
+            <a href="#overview">Overview</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#amenities">Amenities</a>
+            <a href="#location">Location</a>
+            <a href="https://wa.me/919876543210" class="nav-btn" target="_blank">Enquire Now</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero">
+        <span class="badge">PHASE 2 LAUNCHING | PHASE 1 SOLD OUT</span>
+        <h1>Godrej MSR City</h1>
+        <p>Shettigere, North Bangalore | 2 & 3 BHK from ₹1.59 Cr*</p>
+        <a href="https://wa.me/919876543210?text=Hi,%20I%20am%20interested%20in%20Godrej%20MSR%20City.%20Please%20share%20the%20cost%20sheet." class="btn btn-wa" target="_blank">Get Instant Cost Sheet</a>
+    </header>
+
+    <!-- OVERVIEW -->
+    <section id="overview" class="section">
+        <div class="grid-2">
+            <div>
+                <h2 style="font-size: 2.2rem; margin-bottom: 20px;">Mediterranean-Inspired Living</h2>
+                <p style="margin-bottom: 15px;">Godrej MSR City at Shettigere, North Bangalore, brings a distinctive Mediterranean-inspired lifestyle to one of the city’s most connected residential locations. Set against the backdrop of Airport Road, the project introduces <strong>Barca at Godrej MSR City</strong>, where Barcelona-inspired design meets contemporary urban comfort.</p>
+                <p>Spread across a dedicated 17-acre development, the project offers thoughtfully planned 2 & 3 BHK apartments designed around natural light, open spaces and everyday functionality. Sunlit landscapes, breezy balconies and vibrant lifestyle amenities create an atmosphere inspired by the relaxed charm of Mediterranean living.</p>
+            </div>
+            <div>
+                <h3 style="margin-bottom: 15px; font-size: 1.5rem;">Project Highlights</h3>
+                <ul class="highlights">
+                    <li>Mediterranean-inspired residences blending Barcelona charm with contemporary urban living.</li>
+                    <li>Located in Shettigere, along the well-connected Airport Road corridor.</li>
+                    <li>Dedicated 17-acre development featuring thoughtfully planned 2 and 3 BHK apartments.</li>
+                    <li>Kempegowda International Airport is approximately 9 km from the project.</li>
+                    <li>Upcoming Doddajala Metro Station is approximately 6 km away.</li>
+                    <li>Possession is planned from 2030 onwards for selected residences.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing" class="section pricing-section">
+        <div class="section-header">
+            <h2>Price & Floor Plan</h2>
+            <p>Tentative Pre-Launch Prices. Secure your EOI today.</p>
+        </div>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>Size in Sq.Ft.</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2 BHK</td>
+                        <td>1200 Sq.Ft.</td>
+                        <td><strong>₹1.59 Cr*</strong> Onwards <a href="https://wa.me/919876543210?text=I%20want%20the%20price%20breakup%20for%202BHK" target="_blank">Get Price Breakup</a></td>
+                    </tr>
+                    <tr>
+                        <td>2 BHK Luxe</td>
+                        <td>1350 Sq.Ft.</td>
+                        <td><strong>₹1.79 Cr*</strong> Onwards <a href="https://wa.me/919876543210?text=I%20want%20the%20price%20breakup%20for%202BHK%20Luxe" target="_blank">Get Price Breakup</a></td>
+                    </tr>
+                    <tr>
+                        <td>3 BHK + 2T Premium</td>
+                        <td>1750 Sq.Ft.</td>
+                        <td><strong>₹2.32 Cr*</strong> Onwards <a href="https://wa.me/919876543210?text=I%20want%20the%20price%20breakup%20for%203BHK%20Premium" target="_blank">Get Price Breakup</a></td>
+                    </tr>
+                    <tr>
+                        <td>3 BHK Grand</td>
+                        <td>1930 Sq.Ft.</td>
+                        <td><strong>₹2.56 Cr*</strong> Onwards <a href="https://wa.me/919876543210?text=I%20want%20the%20price%20breakup%20for%203BHK%20Grand" target="_blank">Get Price Breakup</a></td>
+                    </tr>
+                    <tr>
+                        <td>3 BHK Luxe</td>
+                        <td>2275 Sq.Ft.</td>
+                        <td><strong>₹2.99 Cr*</strong> Onwards <a href="https://wa.me/919876543210?text=I%20want%20the%20price%20breakup%20for%203BHK%20Luxe" target="_blank">Get Price Breakup</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- AMENITIES -->
+    <section id="amenities" class="section">
+        <div class="section-header">
+            <h2>World-Class Amenities</h2>
+            <p>50+ amenities designed for a premium lifestyle.</p>
+        </div>
+        <div class="amenities-grid">
+            <div class="amenity-card">🏊‍♂️ Swimming Pool</div>
+            <div class="amenity-card">🏋️‍♂️ Modern Gym</div>
+            <div class="amenity-card">🌳 Landscaped Gardens</div>
+            <div class="amenity-card">🏢 Clubhouse</div>
+            <div class="amenity-card">🏀 Sports Arena</div>
+            <div class="amenity-card">🧘‍♀️ Yoga & Meditation</div>
+            <div class="amenity-card">👶 Kids Play Area</div>
+            <div class="amenity-card">🏃‍♂️ Jogging Track</div>
+        </div>
+    </section>
+
+    <!-- LOCATION -->
+    <section id="location" class="section" style="background: var(--bg-gray);">
+        <div class="section-header">
+            <h2>Prime Location</h2>
+            <p>Shettigere, North Bangalore</p>
+        </div>
+        <div class="location-grid">
+            <div>
+                <h3 style="margin-bottom: 20px;">Distance from Project</h3>
+                <ul class="dist-list">
+                    <li>NH-44 (Bellary Road) <span>~5 mins</span></li>
+                    <li>Doddajala Metro Station (upcoming) <span>~12 mins</span></li>
+                    <li>Kempegowda International Airport <span>~15 mins</span></li>
+                    <li>Devanahalli Railway Station <span>~15 mins</span></li>
+                    <li>IFCI Financial City <span>~15 mins</span></li>
+                    <li>Stonehill International School <span>~15 mins</span></li>
+                    <li>Canadian International School <span>~20 mins</span></li>
+                    <li>RMZ Galleria Mall, Yelahanka <span>~30 mins</span></li>
+                </ul>
+                <p style="margin-top: 20px; font-size: 0.9rem;"><strong>Address:</strong> 5MW6+366, Yerthiganahalli, Akkalenahalli Mallena - Halli, Shettigere, Bangalore, Karnataka 562157</p>
+            </div>
+            <div class="map-placeholder">
+                <!-- Replace this div with a real Google Map iframe later if you want -->
+                <p>[ Map Image Placeholder - Save location.jpg in folder ]</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER & RERA -->
+    <footer>
+        <div class="rera">
+            RERA Reg No: PRM/KA/RERA/1250/303/PR/020626/006644 | BARCA AT GODREJ MSR CITY<br>
+            <a href="https://rera.karnataka.gov.in" target="_blank">rera.karnataka.gov.in</a>
+        </div>
+        <p style="max-width: 800px; margin: 0 auto 20px auto;">
+            Disclaimer: This is an authorized channel partner website. The information provided is for general informational purposes only and does not constitute an offer or contract. Prospective buyers are advised to verify all details, including RERA registration, directly from the official Godrej Properties website.
+        </p>
+        <p>© 2026 Godrej MSR City Phase 2. All rights reserved.</p>
+    </footer>
+
+    <!-- FLOATING WHATSAPP BUTTON -->
+    <a href="https://wa.me/919876543210?text=Hi,%20I%20am%20interested%20in%20Godrej%20MSR%20City%20Phase%202." class="float-wa" target="_blank">
+        <svg width="35" height="35" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+
+</body>
+</html>
