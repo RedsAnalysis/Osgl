@@ -1,0 +1,10 @@
+.git
+.gitignore
+.cache
+scripts
+README.md
+CREDITS.md
+wrangler.jsonc
+.assetsignore
+banner.jpeg
+.wrangler
