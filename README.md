@@ -1,69 +1,71 @@
-# OSGL Developers — Godrej MSR City
+# OSGL Developers — Project Portfolio
 
-A fast, fully static landing page for **Godrej MSR City, Shettigere (North Bengaluru)**, built for OSGL Developers as an authorised channel partner.
+A fast, fully static, WhatsApp-first website for **OSGL Developers**, an authorised channel partner for residential projects in North Bengaluru.
 
-The page is plain HTML, CSS and vanilla JavaScript. There is no framework, no build step and no backend. Leads are routed to WhatsApp on **+91 89711 81288**.
+The site is now **four pages**:
+
+| Page | URL | Purpose |
+| --- | --- | --- |
+| OSGL hub | `/` | Brand home + portfolio of Project A / B / C |
+| Project A | `/godrej-msr-city/` | Godrej MSR City, Shettigere |
+| Project B | `/project-b/` | Branded “coming soon” placeholder |
+| Project C | `/project-c/` | Branded “coming soon” placeholder |
+
+Every project page is intentionally short: a hero, a compact fact strip, price + blurred floor-plan teasers, location/gallery, and a final WhatsApp CTA. Project B and C are real pages but marked `noindex` until their details are announced.
+
+No framework, no CMS, no build step and no backend. All enquiries go to **WhatsApp +91 89711 81288**.
 
 ---
 
 ## 1. Preview locally
 
-From this folder:
-
 ```bash
+cd Osgl
 python3 -m http.server 8080
 ```
 
-Then open <http://localhost:8080>.
+Open <http://localhost:8080>. The project switcher, map and WhatsApp links need an internet connection.
 
-Any static server works (`npx serve`, VS Code Live Server, etc.). The Google Map and WhatsApp links need an internet connection.
+Any static server works.
 
 ---
 
-## 2. What's in the box
+## 2. Structure
 
 ```
 Osgl/
-├── index.html                  the landing page
-├── 404.html                    branded not-found page
+├── index.html                     OSGL hub
+├── godrej-msr-city/index.html     Project A
+├── project-b/index.html           Project B placeholder
+├── project-c/index.html           Project C placeholder
+├── 404.html
 ├── assets/
-│   ├── css/
-│   │   ├── fonts.css           self-hosted @font-face declarations
-│   │   └── styles.css          the complete design system
-│   ├── fonts/                  Cormorant Garamond + Manrope (woff2)
-│   ├── img/                    responsive WebP images, favicon, OG image
-│   └── js/main.js              nav, gallery, filters, EMI, WhatsApp form
-├── scripts/
-│   └── build-images.sh         re-downloads and re-processes the stock image set
+│   ├── css/styles.css             the shared design system
+│   ├── css/fonts.css              self-hosted Cormorant + Manrope
+│   ├── fonts/
+│   ├── img/                       high-rise WebP set, blurred plan SVGs, OG cards
+│   └── js/main.js                 project switcher, mobile menu, sticky CTA bar
+├── scripts/build-images.sh        optional image re-processing pipeline
 ├── robots.txt
-├── sitemap.xml
+├── sitemap.xml                    hub + Project A only (B/C are noindex)
 ├── site.webmanifest
-├── _headers                    Cloudflare cache + security headers
-├── wrangler.jsonc              Cloudflare Workers static-assets config
-└── CREDITS.md                  image + font sources
+├── _headers                       Cloudflare cache + security headers
+├── wrangler.jsonc                 Cloudflare Workers static-assets config
+└── CREDITS.md
 ```
 
-### Features
+### Page model
 
-- Editorial, mobile-first design with a Mediterranean palette.
-- Responsive 4K-sourced imagery, colour-graded for consistency, served as WebP at five widths.
-- Sticky header, mobile drawer, scroll reveals, active-section navigation.
-- Filterable 2 BHK / 3 BHK price list.
-- Accessible image lightbox (keyboard arrows, Escape, focus management).
-- Interactive EMI calculator with WhatsApp hand-off.
-- Lead form that opens a pre-filled WhatsApp message (no backend required).
-- UTM capture, so the WhatsApp message can include the lead source (e.g. `google / cpc / campaign`).
-- SEO: canonical, Open Graph/Twitter cards, `ApartmentComplex` + `FAQPage` + `RealEstateAgent` JSON-LD, sitemap, robots.
-- Accessibility: skip link, semantic landmarks, focus states, reduced-motion support, WCAG AA colour contrast.
-- No cookies, no trackers, no third-party JS.
+- **Project switcher**: a native `<details>` menu in the header, present on every page. It lists Project A / B / C and “View all projects”, with the current project marked.
+- **Project A** is the flagship: 62-acre township, G+15 towers, 2 & 3 BHK, price list, blurred 2 BHK / 3 BHK / master-plan teasers, gallery strip, location and map.
+- **Project B / C** are designed placeholders with a “coming soon” badge, three TBA facts, a blurred plan teaser and a register-interest CTA. They are `noindex, follow` until real details are added.
+- **Enquiry path**: every header, hero, price row, plan card, location and footer CTA is a contextual `wa.me` link. There is no form and no server-side data collection.
 
 ---
 
 ## 3. Deploy to Cloudflare
 
-The repo is already configured for a **static-assets Worker** (this is how the current `osgl.reddyarambhumi.workers.dev` deployment runs).
-
-### Option A — Workers (recommended, matches the current setup)
+The repo is configured as a **static-assets Worker** (the current deployment is `osgl.reddyarambhumi.workers.dev`).
 
 ```bash
 cd Osgl
@@ -71,105 +73,126 @@ npx wrangler login          # once
 npx wrangler deploy
 ```
 
-`wrangler.jsonc` uploads the whole folder, but `.assetsignore` excludes `.git`, `.cache`, `scripts`, the README and the old `banner.jpeg`.
+`.assetsignore` keeps `.git`, `.cache`, `scripts`, the README and old source files out of the upload.
 
 Then attach the domain:
 
-1. Open **Cloudflare dashboard → Workers & Pages → `osgl` → Settings → Domains & Routes**.
-2. **Add custom domain** → `osgldevelopers.com`.
-3. Add `www.osgldevelopers.com` too, and redirect `www` → apex with a Cloudflare Redirect Rule (or a Worker route).
-4. If the DNS records are not already present, Cloudflare adds the required CNAME automatically when the domain is in the same account.
+1. **Cloudflare → Workers & Pages → `osgl` → Settings → Domains & Routes**.
+2. Add `osgldevelopers.com`.
+3. Add `www.osgldevelopers.com` and redirect `www` → apex with a Cloudflare Redirect Rule.
+4. If DNS is already in the same Cloudflare account, Cloudflare adds the required record automatically.
 
-### Option B — Cloudflare Pages
+### Cloudflare Pages alternative
 
-1. **Workers & Pages → Create → Pages → Connect to Git**.
-2. Select the `RedsAnalysis/Osgl` repository.
-3. Framework preset: **None**. Build command: leave empty. Output directory: `/` (repo root).
-4. Add `osgldevelopers.com` under **Custom domains**.
+- **Workers & Pages → Create → Pages → Connect to Git**.
+- Select `RedsAnalysis/Osgl`.
+- Framework preset: **None**. Build command: empty. Output directory: `/`.
+- Add `osgldevelopers.com` under **Custom domains**.
 
 ### After deploying
 
 - Purge the Cloudflare cache for the changed files.
-- Test `https://osgldevelopers.com/`, the WhatsApp links and the map on a real phone.
-- Add the domain to **Google Search Console** and submit `https://osgldevelopers.com/sitemap.xml`.
-- Optional: enable **Cloudflare Web Analytics** (cookie-free) and add its snippet before `</body>` if you want traffic numbers. No analytics is installed by default.
+- Test all four pages and the WhatsApp links on a real phone.
+- Submit `https://osgldevelopers.com/sitemap.xml` in **Google Search Console**.
+- Optional: add cookie-free Cloudflare Web Analytics before `</body>` on each page. No analytics is installed.
 
 ---
 
-## 4. Editing the page
+## 4. Editing the site
 
 ### Phone / WhatsApp number
 
-The number appears in two places:
+The number is hard-coded in all four HTML files. Search for:
 
-1. `index.html` — search for `8971181288` (links) and `89711 81288` (display text).
-2. `assets/js/main.js` — `phoneNumber` and `waBase` at the top.
+- `8971181288` — `tel:` and `wa.me` links
+- `89711&nbsp;81288` — visible numbers
 
-Keep the international format without spaces in links: `+918971181288`.
+Keep the international format `+918971181288` in links.
+
+### Project switcher
+
+Each page has a `<details class="project-switcher">` block. To rename or reorder projects:
+
+1. Update the summary badge/name on each page.
+2. Update the three `.ps-item` links in the panel.
+3. Update the mobile menu’s `.mobile-project` links.
+4. Update the footer’s project links.
+
+### Project B and C
+
+They are deliberate placeholders. Replace the name, hero image, copy and metadata when the real project is announced. Before launch:
+
+- Replace `Project B` / `Project C` in the title, H1, switcher, footer and JSON-LD.
+- Add the real location, configurations, price, RERA number and floor plans.
+- Remove `<meta name="robots" content="noindex, follow">` and add the page to `sitemap.xml`.
+- Replace the blurred plan SVG with the official plan (or keep it as a teaser).
+- Use legally approved project imagery.
 
 ### Prices / configurations
 
-In `index.html`, search for `class="unit"`. Each card has `data-beds` (used by the 2/3 BHK filter), a price and a pre-filled WhatsApp message. The EMI calculator presets live in `#calculator` (`data-price`) and in `assets/js/main.js` (`presets` are read from the buttons). Default values are in the range inputs.
+In `godrej-msr-city/index.html`, search for `class="price-row"`. Each row contains the type, size, price and a pre-filled WhatsApp link. The plan cards below are separate WhatsApp links.
+
+### Floor plans
+
+The three blurred files are **representative, custom-drawn SVG layouts**, not the actual project plans:
+
+- `assets/img/plan-2bhk.svg`
+- `assets/img/plan-3bhk.svg`
+- `assets/img/plan-master.svg`
+
+They are blurred in CSS and labelled representative. Replace them with the developer’s official plans when available, then adjust the blur/overlay in `.plan-visual img` if you want the real plan to be readable.
 
 ### Images
 
-All images are in `assets/img/`, named by use and width, e.g. `hero-2400.webp`, `amenity-pool-1200.webp`.
+The current set is high-rise stock photography (3 Pexels sources) plus a pool and an interior (Unsplash). All sources are 4K and are exported as responsive WebP at multiple widths.
 
-To regenerate the whole stock set:
+Regenerate:
 
 ```bash
 ./scripts/build-images.sh
 ```
 
-To use real project renders later, replace the files with the same names and dimensions (or regenerate with the script). Keep the widths in the `srcset` attributes in sync if you change them.
-
-### Fonts
-
-Self-hosted in `assets/fonts/`; declarations are in `assets/css/fonts.css`. Cormorant Garamond is used for display type, Manrope for body/UI.
-
-### Styles and scripts
-
-- `assets/css/styles.css` — design tokens, layout, components, responsive rules, reduced-motion/print styles.
-- `assets/js/main.js` — all interactions, written as a single IIFE.
-
-No npm install is required to run or deploy the site.
+To use official project renders, replace the files in `assets/img/` with the same names/dimensions, or update the `srcset` lists in the HTML. Keep the representative-imagery disclaimer while stock images are in use.
 
 ---
 
-## 5. Before you go live — verify these
+## 5. Before going live — verify these
 
-These details were carried over from the existing page / competitor reference. Please confirm them with the developer's current cost sheet before publishing:
+These were carried over from the previous page / project reference. Confirm them with the developer’s current cost sheet before publishing:
 
-- **RERA registration:** `PRM/KA/RERA/1250/303/PR/020626/006644` (BARCA AT GODREJ MSR CITY). The competitor page shows a different number (`...010425/007644`), so verify the correct current registration on [rera.karnataka.gov.in](https://rera.karnataka.gov.in).
-- **Project facts:** 17 acres, 1,961 residences, 2B + G + 15 storeys, possession 2030 onwards.
-- **Prices:** 2 BHK ₹1.59 Cr*, 2 BHK Luxe ₹1.79 Cr*, 3 BHK + 2T Premium ₹2.32 Cr*, 3 BHK Grand ₹1,930 sq.ft. at ₹2.56 Cr*, 3 BHK Luxe ₹2.99 Cr*. All are indicative pre-launch prices, exclusive of GST/registration/other charges.
-- **3 BHK Grand size:** this page uses **1,930 sq.ft.** (your existing page). The competitor page lists **1,390 sq.ft.** — confirm the correct size.
-- **Channel-partner authorisation:** the page describes OSGL Developers as an authorised channel partner and includes a clear "not the official developer website" disclaimer. Keep this wording, and keep the authorization on file.
-- **Imagery:** all photographs are stock/representative. Replace them with the developer's approved renders when available. Do not present stock images as actual project photography.
+- **Land parcel: 62 acres** — used throughout this build (the previous page said 17).
+- **G+15 towers** — ground plus 15 floors.
+- **1,961 residences** — confirm whether this is the phase or the whole township.
+- **RERA registration:** `PRM/KA/RERA/1250/303/PR/020626/006644` (BARCA AT GODREJ MSR CITY). The competitor page lists a different number, so verify the current registration on [rera.karnataka.gov.in](https://rera.karnataka.gov.in).
+- **Prices:** 2 BHK ₹1.59 Cr*, 2 BHK Luxe ₹1.79 Cr*, 3 BHK + 2T Premium ₹2.32 Cr*, 3 BHK Grand ₹2.56 Cr* (1,930 sq.ft. on this page; the competitor lists 1,390 sq.ft.), 3 BHK Luxe ₹2.99 Cr*.
+- **Possession:** 2030 onwards for selected residences.
+- **Channel-partner authorisation:** keep the authorisation on file and keep the “not the official developer website” disclaimer.
+- **Imagery:** all current photographs are representative stock. Replace with approved project renders before presenting them as the project.
+- **Project B/C:** no names, prices, locations or RERA numbers have been invented. Keep them as placeholders until confirmed.
 
-The footer already carries the RERA number, the channel-partner disclaimer, the representative-imagery note and the price disclaimer. Update them if any detail changes.
+The footer carries the RERA line, channel-partner disclaimer, representative-imagery note and price disclaimer. Update them when details change.
 
 ---
 
-## 6. Lead flow
+## 6. SEO
 
-1. Every CTA opens `https://wa.me/918971181288?text=...` with a context-specific message (cost sheet, floor plans, site visit, payment plan, brochure, amenity plan).
-2. The callback form validates name + Indian mobile number, then opens WhatsApp with the name, number, interest and (if present) UTM source.
-3. The EMI calculator updates its WhatsApp message with the selected price, down payment, rate, tenure and indicative EMI.
-4. No data is stored on the server. If you want a CRM/email copy as well, add a form endpoint (Formspree, Cloudflare Worker, etc.) — the current form intentionally has no backend.
+- Hub and Project A are indexable, with unique titles, descriptions, canonical URLs, OG/Twitter cards and JSON-LD (`RealEstateAgent` + `ItemList`; `ApartmentComplex` + `Offer` + `BreadcrumbList`).
+- Project B/C are `noindex, follow` and excluded from `sitemap.xml`.
+- The project switcher uses real `<a>` links, so projects are discoverable.
+- The map is a lazy Google Maps iframe; no API key is required for the basic embed.
 
 ---
 
 ## 7. Performance notes
 
-- Hero image is preloaded with `imagesrcset`/`imagesizes`; mobile gets a portrait crop.
-- All below-the-fold images are lazy-loaded with explicit dimensions (no layout shift).
+- Hero images are preloaded with `imagesrcset`/`imagesizes`; the same portrait crops are reused for cards.
+- Below-the-fold images are lazy-loaded with explicit dimensions.
 - Fonts are self-hosted and preloaded; only Latin subsets are used (the rupee sign falls back to Manrope).
-- CSS/JS are small and cacheable. Cloudflare Brotli + HTTP/3 will compress the HTML/CSS further in production.
-- Lighthouse (local, mobile emulation, uncompressed Python server): **89–90 performance, 100 accessibility, 100 best practices, 100 SEO**. Production should be better with Brotli/CDN and HTTP/3.
+- CSS/JS are small and cacheable; Cloudflare Brotli/HTTP3 compresses the HTML/CSS further.
+- No third-party JS, no analytics, no cookies set by the site itself (the Google Maps iframe has its own behaviour).
 
 ---
 
 ## 8. Credits
 
-See [CREDITS.md](CREDITS.md) for the Unsplash source photographs and font licences.
+See [CREDITS.md](CREDITS.md) for photography sources and font licences.

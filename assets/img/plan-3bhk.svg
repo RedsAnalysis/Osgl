@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="620" viewBox="0 0 800 620" fill="none" role="img" aria-label="Representative 3 BHK floor plan">
+  <defs>
+    <pattern id="g3" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0H0V24" stroke="#efe4d0" stroke-width=".5" opacity=".09"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="620" fill="url(#g3)"/>
+  <g stroke="#efe4d0" stroke-width="4.4" stroke-linejoin="round" stroke-linecap="square" opacity=".92">
+    <rect x="40" y="42" width="720" height="516"/>
+    <path d="M370 42v208M370 314v244M40 300h150M240 300h130M370 214h390M370 380h390M590 214v166"/>
+    <path d="M180 300v106M180 406h60M590 380v178"/>
+  </g>
+  <g stroke="#efe4d0" stroke-width="2" opacity=".7">
+    <path d="M100 42v14M100 544v14M240 42v14M240 544v14M370 42v14M370 544v14M480 42v14M480 544v14M590 42v14M590 544v14M700 42v14M700 544v14"/>
+    <path d="M40 110h14M40 240h14M40 300h14M40 420h14M760 110h14M760 240h14M760 300h14M760 420h14"/>
+  </g>
+  <g stroke="#c9a46b" stroke-width="1" opacity=".55">
+    <path d="M40 26h720M40 20v12M760 20v12"/>
+    <path d="M22 42v516M16 42h12M16 558h12"/>
+    <path d="M410 180a34 34 0 0 1 34 34"/>
+    <path d="M410 340a34 34 0 0 1 34 34"/>
+    <path d="M630 292a36 36 0 0 1 36 36"/>
+    <path d="M100 470a26 26 0 0 0 26 26"/>
+  </g>
+  <g fill="#efe4d0" opacity=".82" font-family="monospace" font-size="12" letter-spacing="2">
+    <text x="62" y="150">LIVING / DINING</text>
+    <text x="400" y="110">KITCHEN</text>
+    <text x="400" y="282">BEDROOM 1</text>
+    <text x="620" y="282">BEDROOM 2</text>
+    <text x="620" y="470">BEDROOM 3</text>
+    <text x="62" y="348">BATH 1</text>
+    <text x="194" y="348">BATH 2</text>
+    <text x="400" y="460">BATH 3</text>
+    <text x="264" y="278">FOYER</text>
+    <text x="400" y="518">BALCONY</text>
+  </g>
+  <g fill="#c9a46b" opacity=".55" font-family="monospace" font-size="9" letter-spacing="1.5">
+    <text x="330" y="20">11,800</text>
+    <text x="8" y="300" transform="rotate(-90 8 300)">8,400</text>
+    <text x="600" y="606">REPRESENTATIVE LAYOUT · NOT TO SCALE</text>
+  </g>
+</svg>

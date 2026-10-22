@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="620" viewBox="0 0 1000 620" fill="none" role="img" aria-label="Representative master plan">
+  <defs>
+    <pattern id="gm" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M28 0H0V28" stroke="#efe4d0" stroke-width=".5" opacity=".08"/>
+    </pattern>
+    <pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <path d="M0 0v8" stroke="#c9a46b" stroke-width="1" opacity=".35"/>
+    </pattern>
+  </defs>
+  <rect width="1000" height="620" fill="url(#gm)"/>
+  <g stroke="#efe4d0" stroke-width="3.6" opacity=".85">
+    <path d="M50 70h900v480H50z"/>
+    <path d="M50 350h250M300 70v110M300 300v250M650 70v180M650 380v170"/>
+  </g>
+  <g stroke="#c9a46b" stroke-width="1" opacity=".5" stroke-dasharray="5 6">
+    <path d="M50 470h900M300 70v480M650 70v480"/>
+  </g>
+  <g fill="none" stroke="#efe4d0" stroke-width="2.4" opacity=".8">
+    <rect x="95" y="120" width="110" height="110" rx="3"/>
+    <rect x="95" y="390" width="110" height="110" rx="3"/>
+    <rect x="340" y="120" width="110" height="110" rx="3"/>
+    <rect x="825" y="120" width="85" height="110" rx="3"/>
+    <rect x="825" y="390" width="85" height="110" rx="3"/>
+  </g>
+  <g fill="url(#hatch)" stroke="#efe4d0" stroke-width="2.2" opacity=".9">
+    <rect x="125" y="150" width="50" height="50"/>
+    <rect x="125" y="420" width="50" height="50"/>
+    <rect x="370" y="150" width="50" height="50"/>
+    <rect x="850" y="150" width="38" height="50"/>
+    <rect x="850" y="420" width="38" height="50"/>
+  </g>
+  <g stroke="#c9a46b" stroke-width="2" opacity=".8">
+    <rect x="400" y="380" width="190" height="70" rx="2"/>
+    <path d="M410 450v35h170v-35M430 390v50M470 390v50M510 390v50M550 390v50M580 390v50"/>
+    <rect x="420" y="290" width="150" height="55" rx="2"/>
+    <path d="M440 300h110v35H440z"/>
+    <circle cx="760" cy="300" r="44"/>
+    <path d="M716 300h88M760 256v88"/>
+  </g>
+  <g fill="#efe4d0" opacity=".75" font-family="monospace" font-size="11" letter-spacing="2">
+    <text x="86" y="256">TOWER 1</text>
+    <text x="86" y="526">TOWER 2</text>
+    <text x="331" y="256">TOWER 3</text>
+    <text x="816" y="256">TOWER 4</text>
+    <text x="816" y="526">TOWER 5</text>
+    <text x="410" y="372">CLUBHOUSE</text>
+    <text x="424" y="286">POOL</text>
+    <text x="722" y="372">CENTRAL GREEN</text>
+    <text x="620" y="560">ENTRY</text>
+  </g>
+  <g stroke="#efe4d0" stroke-width="1.2" opacity=".6">
+    <path d="M920 70l20 20M920 90l20-20M930 70v20"/>
+    <circle cx="930" cy="40" r="2" fill="#efe4d0"/>
+  </g>
+  <g fill="#c9a46b" opacity=".5" font-family="monospace" font-size="9" letter-spacing="1.5">
+    <text x="50" y="600">REPRESENTATIVE SITE PLAN · NOT TO SCALE</text>
+  </g>
+</svg>

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="620" viewBox="0 0 800 620" fill="none" role="img" aria-label="Representative 2 BHK floor plan">
+  <defs>
+    <pattern id="g2" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0H0V24" stroke="#efe4d0" stroke-width=".5" opacity=".09"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="620" fill="url(#g2)"/>
+  <g stroke="#efe4d0" stroke-width="4.4" stroke-linejoin="round" stroke-linecap="square" opacity=".92">
+    <rect x="40" y="42" width="720" height="516"/>
+    <path d="M424 42v196M424 320v238M40 330h154M240 330h184M424 238h336M424 406h336"/>
+    <path d="M268 42v164M268 206h156M196 330v106M196 436h72"/>
+  </g>
+  <g stroke="#efe4d0" stroke-width="2" opacity=".7">
+    <path d="M100 42v14M100 544v14M268 42v14M268 544v14M424 42v14M424 544v14M600 42v14M600 544v14M760 42v14M760 544v14"/>
+    <path d="M40 120h14M40 260h14M40 330h14M40 470h14M760 120h14M760 260h14M760 330h14M760 470h14"/>
+  </g>
+  <g stroke="#c9a46b" stroke-width="1" opacity=".55">
+    <path d="M40 26h720M40 20v12M760 20v12"/>
+    <path d="M22 42v516M16 42h12M16 558h12"/>
+    <path d="M460 226a36 36 0 0 1 36 36"/>
+    <path d="M540 358a40 40 0 0 1 40 40"/>
+    <path d="M90 400a26 26 0 0 0 26 26"/>
+  </g>
+  <g fill="#efe4d0" opacity=".82" font-family="monospace" font-size="12" letter-spacing="2">
+    <text x="62" y="150">LIVING / DINING</text>
+    <text x="452" y="120">KITCHEN</text>
+    <text x="452" y="292">BEDROOM 1</text>
+    <text x="452" y="474">BEDROOM 2</text>
+    <text x="64" y="378">BATH 1</text>
+    <text x="208" y="378">BATH 2</text>
+    <text x="300" y="300">ENTRY</text>
+    <text x="452" y="518">BALCONY</text>
+  </g>
+  <g fill="#c9a46b" opacity=".55" font-family="monospace" font-size="9" letter-spacing="1.5">
+    <text x="330" y="20">9,600</text>
+    <text x="8" y="300" transform="rotate(-90 8 300)">7,200</text>
+    <text x="600" y="606">REPRESENTATIVE LAYOUT · NOT TO SCALE</text>
+  </g>
+</svg>

@@ -8,6 +8,18 @@
 /index.html
   Cache-Control: public, max-age=0, must-revalidate
 
+/godrej-msr-city/
+/godrej-msr-city/index.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/project-b/
+/project-b/index.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/project-c/
+/project-c/index.html
+  Cache-Control: public, max-age=0, must-revalidate
+
 /assets/css/*
   Cache-Control: public, max-age=3600, must-revalidate
 
