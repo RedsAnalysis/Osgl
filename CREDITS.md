@@ -1,36 +1,32 @@
 # Credits & licences
 
-## Photography
+## Photography and project renders
 
-All photographs are **stock imagery used as representative visuals**. They do not depict the actual project, its towers, amenities or surroundings.
+### Godrej MSR City
+- New hero: [Unsplash photo 1694694314752-14a25e3cfdec](https://images.unsplash.com/photo-1694694314752-14a25e3cfdec) — residential community with pool, used as a representative/stock image under the [Unsplash License](https://unsplash.com/license).
+- Existing pool and interior gallery images: [Unsplash photo 1551882547-ff40c63fe5fa](https://images.unsplash.com/photo-1551882547-ff40c63fe5fa) and [photo 1600210491892-03d54c0aaf87](https://images.unsplash.com/photo-1600210491892-03d54c0aaf87).
 
-### High-rise residential imagery (Pexels)
+### Embassy Greenshore
+Renders, interiors, master plan and unit plans from the developer’s **Embassy Greenshore** brochure supplied by the client. Used with the client’s confirmation of permission. Representative/artist’s impressions; not official project photography.
 
-| Used for | Source |
-| --- | --- |
-| Project A hero + hub | [Pexels photo 32241750](https://www.pexels.com/photo/32241750/) — modern residential tower with glass balconies |
-| Project B hero + hub | [Pexels photo 31848592](https://www.pexels.com/photo/31848592/) — three G+15 residential towers at golden hour |
-| Project C hero + hub | [Pexels photo 33975719](https://www.pexels.com/photo/33975719/) — stone-clad residential building at dusk |
+### Brigade Insignia
+Renders, interiors, master plan and unit plans from the developer’s **Brigade Insignia** presentation deck supplied by the client. Used with the client’s confirmation of permission. Representative/artist’s impressions; not official project photography.
 
-### Amenity + interior imagery (Unsplash)
+### TVS Emerald Altura
+Renders, amenities, master plan and unit plans from the **TVS Altura** brochure and the **TVS Emerald Sathanur** presentation deck supplied by the client. Used with the client’s confirmation of permission. Representative/artist’s impressions; not official project photography.
 
-| Used for | Source |
-| --- | --- |
-| Pool & clubhouse strip | [photo-1551882547-ff40c63fe5fa](https://images.unsplash.com/photo-1551882547-ff40c63fe5fa) |
-| Interiors strip | [photo-1600210491892-03d54c0aaf87](https://images.unsplash.com/photo-1600210491892-03d54c0aaf87) |
-
-**Licences**
-
-- [Pexels License](https://www.pexels.com/license/) — free for commercial use; attribution not required.
-- [Unsplash License](https://unsplash.com/license) — free for commercial use; attribution not required.
-
-Attribution is provided here as good practice. Replace these images with the developer’s approved project renders before presenting them as the actual project.
+All project names, logos and trademarks belong to their respective developers and are used for identification only. OSGL Developers is an authorised channel partner and is not the developer of these projects.
 
 ---
 
-## Floor-plan teasers
+## Floor plans
 
-The blurred plan files in `assets/img/plan-2bhk.svg`, `plan-3bhk.svg` and `plan-master.svg` are **custom-drawn representative layouts**, not the actual project plans. They are intentionally blurred and labelled representative. Replace them with official plans when available.
+- **Embassy Greenshore:** 3 BHK and 4 BHK unit plans and master plan cropped from the supplied brochure.
+- **Brigade Insignia:** 3 BHK and 4 BHK unit plans and master plan cropped from the supplied deck.
+- **TVS Emerald Altura:** 2 BHK and 3 BHK unit plans and master plan cropped from the supplied TVS/Sathanur decks.
+- **Godrej MSR City:** `plan-2bhk.svg`, `plan-3bhk.svg` and `plan-master.svg` are custom representative layouts, not official plans.
+
+All plans are blurred on the page; the full versions are shared on WhatsApp. Replace with the developer’s official current plans before presenting them as final.
 
 ---
 

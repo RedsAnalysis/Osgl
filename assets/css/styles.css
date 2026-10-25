@@ -2048,3 +2048,38 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 16px); }
 
 .mobile-label-gap { margin-top: 22px; }
 .site-visit-link { margin-top: 20px; }
+
+/* Four-project hub */
+.project-grid.is-four { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.hub-collage.is-four {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  height: min(58vh, 520px);
+  min-height: 390px;
+}
+.hub-collage.is-four .collage-caption strong { font-size: 1.05rem; }
+@media (max-width: 960px) {
+  .hub-collage.is-four { height: 340px; min-height: 0; }
+  .project-grid.is-four .project-card:last-child { grid-column: auto; max-width: none; justify-self: stretch; }
+}
+@media (max-width: 760px) {
+  .hub-collage.is-four { height: 300px; }
+  .hub-collage.is-four .collage-caption strong { font-size: .9rem; }
+  .project-grid.is-four { grid-template-columns: 1fr; }
+  .project-grid.is-four .project-card:last-child { grid-column: auto; }
+}
+@media (max-width: 380px) {
+  .hub-collage.is-four { height: 270px; }
+}
+
+/* Blurred official brochure plans, muted into the dark card */
+.plan-visual--pdf img {
+  filter: grayscale(1) brightness(.62) contrast(1.2) blur(2.2px);
+  opacity: .92;
+}
+.plan-card:hover .plan-visual--pdf img {
+  filter: grayscale(1) brightness(.72) contrast(1.2) blur(1.7px);
+  opacity: .96;
+}
+.hero-pos-bottom img { object-position: center bottom; }
+.project-card-media img, .collage-card img { will-change: transform; }
