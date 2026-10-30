@@ -1,18 +1,18 @@
-# OSGL Developers — Four-Project Portfolio
+# OSGL Developers — Five-Project Portfolio
 
 A fast, fully static, WhatsApp-first website for **OSGL Developers**, an authorised channel partner for residential projects in North Bengaluru.
 
-The site now has **five pages: one hub and four project pages**.
+The site now has **five pages: one hub and four project pages**, covering **five projects** — Embassy Greenshore and Embassy Edge share the Embassy page.
 
 | Page | URL | Project |
 | --- | --- | --- |
-| Hub | `/` | Four-project portfolio |
+| Hub | `/` | Five-project portfolio |
 | A | `/godrej-msr-city/` | Godrej MSR City |
-| B | `/project-b/` | Embassy Greenshore |
+| B | `/project-b/` | Embassy Greenshore & Edge |
 | C | `/project-c/` | Brigade Insignia |
 | D | `/project-d/` | TVS Emerald Altura |
 
-Every project page uses the same short template: hero → quick facts → price/plans → gallery → location → WhatsApp CTA. Prices are **on request** for Embassy, Brigade and TVS; Godrej keeps the existing starting prices. **No prices for the three new projects are published on the page** — every price row and CTA goes to a project-specific WhatsApp message.
+Every project page uses the same short template: hero → quick facts → price/plans → gallery → location → WhatsApp CTA. Embassy prices are published for **Embassy Greenshore and Embassy Edge**; Brigade and TVS remain **price on request**. Godrej keeps its existing starting prices. Every CTA goes to a project-specific WhatsApp message.
 
 No framework, no CMS, no build step and no backend. All enquiries go to **WhatsApp +91 89711 81288**.
 
@@ -37,11 +37,19 @@ Open <http://localhost:8080>. The project switcher, maps and WhatsApp links need
 - RERA: `PRM/KA/RERA/1250/303/PR/020626/006644`.
 - Hero image replaced with a residential community/pool image (Option B).
 
-### B · Embassy Greenshore — Embassy Springs, Devanahalli
+### B · Embassy Greenshore & Embassy Edge
+**Embassy Greenshore** — Embassy Springs, Devanahalli
 - 288-acre Embassy Springs township · 14-acre enclave · 8 towers · **878 homes** · 3.6-acre central park.
-- 2, 3 & 4 BHK. 3 BHK 1,750–1,838 sq.ft. · 4 BHK 2,341–2,577 sq.ft.
+- **CLPP · possession 31-Dec-2031 · all-inclusive excluding SDR.**
+- 3 BHK 1,750–1,838: ₹2.50–2.79 Cr · 3.5 BHK 2,233–2,327: ₹3.16–3.39 Cr · 3 BHK Penthouse 1,882–1,885: ₹2.76–2.79 Cr · 4 BHK 2,570: ₹3.70–3.93 Cr · 4 BHK Jodi 2,341: ₹3.39–3.49 Cr.
+- Tower 8: 3 BHK 1,836: ₹2.88–2.95 Cr · 4 BHK Small 2,203: ₹3.37–3.46 Cr · 4 BHK Large 2,577: ₹4.08–4.19 Cr.
 - RERA: `PRM/KA/RERA/1250/303/PR/201125/008265`.
-- Price and possession: **on request** via WhatsApp.
+
+**Embassy Edge** — location and RERA on request
+- **20:80 payment plan · possession 31-Dec-2031 · all-inclusive excluding CAM & SDR.**
+- 2 BHK 983–1,058: ₹1.13–1.22 Cr · 2.5 BHK 1,089–1,125: ₹1.25–1.32 Cr · 3 BHK 1,240–1,359: ₹1.41–1.58 Cr.
+- Edge RERA is **not published** — the site says “details on request” rather than inventing or reusing the Greenshore RERA.
+- Edge has no Edge-specific renders yet; the page uses Embassy Springs representative imagery and does not attach it to the Edge price card.
 
 ### C · Brigade Insignia — Yelahanka
 - 6 acres · 6 towers · **430 homes** · **3B + S + 18 floors** · low-density.
@@ -78,9 +86,9 @@ The floor plans are **blurred** in CSS for privacy; the full plans are sent on W
 
 ```
 Osgl/
-├── index.html                     four-project hub
+├── index.html                     five-project hub
 ├── godrej-msr-city/index.html     Project A
-├── project-b/index.html           Embassy Greenshore
+├── project-b/index.html           Embassy Greenshore & Edge
 ├── project-c/index.html           Brigade Insignia
 ├── project-d/index.html           TVS Emerald Altura
 ├── 404.html
@@ -100,9 +108,9 @@ Osgl/
 ```
 
 ### Navigation
-- Project switcher in the header on every page: **A Godrej · B Embassy · C Brigade · D TVS**.
-- Mobile menu includes all four projects and the on-page links.
-- Footer lists all four projects.
+- Project switcher in the header on every page: **A Godrej · B Embassy Projects (Greenshore & Edge) · C Brigade · D TVS**.
+- Mobile menu includes all four project pages (five projects) and the on-page links.
+- Footer lists all four project pages.
 - All four project pages are indexable and included in `sitemap.xml`; the old placeholder `noindex` has been removed.
 
 ### Enquiry routing
@@ -130,11 +138,11 @@ After deploying:
 ## 6. Before go-live — verify
 
 - **Godrej:** 62 acres, G+15, 1,961 homes, 2030, the five prices and RERA `PRM/KA/RERA/1250/303/PR/020626/006644`. The 3 BHK Grand is shown as 1,930 sq.ft. from the previous page; a competitor lists 1,390 sq.ft., so verify that unit size before publishing.
-- **Embassy:** 288-acre township, 14-acre enclave, 8 towers, 878 homes, 3.6-acre park, 3 BHK/4 BHK sizes, RERA `PRM/KA/RERA/1250/303/PR/201125/008265`.
+- **Embassy:** Greenshore 288-acre township, 14-acre enclave, 8 towers, 878 homes, 3.6-acre park; verify the updated price table, CLPP, possession 31-Dec-2031, RERA `PRM/KA/RERA/1250/303/PR/201125/008265`; Edge prices/20:80 and RERA-on-request wording.
 - **Brigade:** 430 homes (from the brief, not explicit in the deck), 3B+S+18 floors, unit sizes, RERA `PRM/KA/RERA/1251/309/PR/180524/006894`. Price/offer and possession to be confirmed on WhatsApp only.
 - **TVS:** 10.06 acres, 12 towers, 975 homes, 2B+G+12, 29,000+ sq.ft. clubhouses, unit sizes, RERA `PRM/KA/RERA/1251/309/PR/040426/008572`.
 - **Images:** confirm each developer’s current approval for web use; all renders are artist’s impressions.
-- **Prices:** Embassy, Brigade and TVS are deliberately “Price on request”. If you later publish a price, update the price rows, disclaimers and JSON-LD together.
+- **Prices:** Embassy Greenshore and Edge are published; Brigade and TVS are deliberately “Price on request”. If a price changes, update the price table, disclaimers and JSON-LD together.
 
 ---
 

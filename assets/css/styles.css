@@ -2083,3 +2083,101 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 16px); }
 }
 .hero-pos-bottom img { object-position: center bottom; }
 .project-card-media img, .collage-card img { will-change: transform; }
+
+/* Embassy Greenshore + Edge pair */
+.embassy-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(14px, 2vw, 22px);
+  align-items: stretch;
+}
+.embassy-card {
+  display: flex;
+  flex-direction: column;
+  padding: clamp(18px, 2.2vw, 26px);
+  border: 1px solid var(--line);
+  background: var(--paper);
+}
+.embassy-card-head { margin-bottom: 12px; }
+.embassy-card .eyebrow { margin-bottom: 8px; }
+.embassy-card h3 {
+  margin-bottom: 6px;
+  font-size: clamp(1.5rem, 2.3vw, 1.9rem);
+}
+.embassy-sub {
+  font-size: 10px;
+  line-height: 1.55;
+  letter-spacing: .04em;
+  color: var(--muted-2);
+}
+.price-table {
+  margin-top: 8px;
+  border-top: 1px solid var(--line);
+}
+.price-table-group {
+  margin: 10px 0 2px;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+}
+.price-table-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 12px;
+  align-items: baseline;
+  padding: 7px 0;
+  border-bottom: 1px solid var(--line);
+}
+.price-table-row strong {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--ink);
+}
+.price-table-row small {
+  display: block;
+  margin-top: 1px;
+  font-size: 9px;
+  color: var(--muted-2);
+}
+.price-table-row > span {
+  font-family: var(--font-display);
+  font-size: 1.08rem;
+  line-height: 1;
+  color: var(--ink);
+  white-space: nowrap;
+}
+.embassy-note {
+  margin-top: 12px;
+  font-size: 9.5px;
+  line-height: 1.6;
+  color: var(--muted-2);
+}
+.embassy-note strong { color: var(--ink); }
+.embassy-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 14px;
+}
+.embassy-actions .btn { flex: 1 1 auto; }
+.plan-card--request {
+  background:
+    radial-gradient(circle at 85% 10%, rgba(221,190,141,.12), transparent 45%),
+    var(--ink);
+  border-color: rgba(221,190,141,.25);
+}
+.plan-card--request .plan-content { max-width: 480px; }
+.plan-card--request .fineprint { color: rgba(247,241,231,.5); margin-top: 4px; }
+@media (max-width: 960px) {
+  .embassy-pair { grid-template-columns: 1fr; }
+}
+@media (max-width: 760px) {
+  .embassy-card { padding: 18px; }
+  .price-table-row strong { font-size: 11.5px; }
+  .price-table-row > span { font-size: 1rem; }
+  .embassy-actions .btn { flex: 1 1 100%; }
+}

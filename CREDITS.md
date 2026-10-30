@@ -9,6 +9,9 @@
 ### Embassy Greenshore
 Renders, interiors, master plan and unit plans from the developer’s **Embassy Greenshore** brochure supplied by the client. Used with the client’s confirmation of permission. Representative/artist’s impressions; not official project photography.
 
+### Embassy Edge
+No Edge-specific renders were supplied, so the Embassy page uses Embassy Springs/Greenshore representative imagery and does **not** attach it to the Edge price card. Embassy Edge prices and the 20:80 plan come from the client-supplied price sheet; Edge location and RERA are marked “on request”.
+
 ### Brigade Insignia
 Renders, interiors, master plan and unit plans from the developer’s **Brigade Insignia** presentation deck supplied by the client. Used with the client’s confirmation of permission. Representative/artist’s impressions; not official project photography.
 
