@@ -2181,3 +2181,80 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 16px); }
   .price-table-row > span { font-size: 1rem; }
   .embassy-actions .btn { flex: 1 1 100%; }
 }
+
+/* Five-project hub: the newest project gets a full-width closing card */
+.project-grid.is-five { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.project-card.is-wide {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+}
+.project-card.is-wide .project-card-media {
+  aspect-ratio: auto;
+  min-height: 390px;
+  height: 100%;
+}
+.project-card.is-wide .project-card-body {
+  padding: clamp(24px, 3.2vw, 42px);
+}
+.project-card.is-wide .project-name {
+  font-size: clamp(2rem, 3.1vw, 2.9rem);
+  margin-bottom: 14px;
+}
+.project-card.is-wide .project-meta {
+  font-size: 12.5px;
+  gap: 7px;
+  margin-bottom: 22px;
+}
+.project-card.is-wide .project-price strong { font-size: 1.65rem; }
+.project-card.is-wide .project-actions { margin-top: 20px; }
+@media (max-width: 960px) {
+  .project-grid.is-five { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .project-card.is-wide { max-width: none; width: 100%; }
+  .project-card.is-wide .project-card-media { min-height: 320px; }
+}
+@media (max-width: 760px) {
+  .project-grid.is-five { grid-template-columns: 1fr; }
+  .project-card.is-wide { display: flex; flex-direction: column; }
+  .project-card.is-wide .project-card-media {
+    aspect-ratio: 4 / 3;
+    min-height: 0;
+    height: auto;
+  }
+  .project-card.is-wide .project-card-body { padding: 18px; }
+  .project-card.is-wide .project-name { font-size: 2rem; }
+}
+
+.project-desc {
+  margin: 2px 0 22px;
+  max-width: 46ch;
+  font-size: 12.5px;
+  line-height: 1.65;
+  color: var(--muted);
+}
+.project-card.is-wide .project-desc { max-width: 40ch; }
+@media (max-width: 760px) {
+  .project-desc { margin-bottom: 16px; font-size: 11.5px; }
+}
+
+/* Clear master-plan card (only for plans the developer publishes openly) */
+.plan-card--clear .plan-visual img {
+  filter: none;
+  opacity: 1;
+  transform: scale(1);
+}
+.plan-card--clear::after {
+  background:
+    linear-gradient(180deg, rgba(7, 15, 13, 0) 42%, rgba(7, 15, 13, .92) 100%),
+    linear-gradient(90deg, rgba(7, 15, 13, .12), transparent 40%);
+}
+
+.plan-card--tall { min-height: 360px; }
+@media (max-width: 760px) {
+  .plan-card--tall { min-height: 260px; }
+}
+
+/* Clear master plan sits on a warm mat so the whole sheet is visible */
+.plan-card--clear { background: var(--sand); }
+.plan-card--clear .plan-visual { inset: 0; background: var(--sand); }
+.plan-card--clear .plan-visual img { object-fit: contain; }

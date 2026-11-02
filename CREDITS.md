@@ -12,6 +12,9 @@ Renders, interiors, master plan and unit plans from the developer’s **Embassy 
 ### Embassy Edge
 No Edge-specific renders were supplied, so the Embassy page uses Embassy Springs/Greenshore representative imagery and does **not** attach it to the Edge price card. Embassy Edge prices and the 20:80 plan come from the client-supplied price sheet; Edge location and RERA are marked “on request”.
 
+### Nikoo Homes 8
+Renders and amenity crops from the client-supplied **Why Thanisandra? Why Nikoo Homes 8?** deck. Landscape master plan from the client-supplied **Master Plan Final_A3.pdf**. Used with the client’s confirmation of permission. Representative/artist’s impressions; not official project photography. No unit floor plans were supplied, so the page links to plans on request.
+
 ### Brigade Insignia
 Renders, interiors, master plan and unit plans from the developer’s **Brigade Insignia** presentation deck supplied by the client. Used with the client’s confirmation of permission. Representative/artist’s impressions; not official project photography.
 
@@ -27,9 +30,10 @@ All project names, logos and trademarks belong to their respective developers an
 - **Embassy Greenshore:** 3 BHK and 4 BHK unit plans and master plan cropped from the supplied brochure.
 - **Brigade Insignia:** 3 BHK and 4 BHK unit plans and master plan cropped from the supplied deck.
 - **TVS Emerald Altura:** 2 BHK and 3 BHK unit plans and master plan cropped from the supplied TVS/Sathanur decks.
+- **Nikoo Homes 8:** no unit plans supplied; the page shows the official landscape master plan and a floor-plans-on-request card.
 - **Godrej MSR City:** `plan-2bhk.svg`, `plan-3bhk.svg` and `plan-master.svg` are custom representative layouts, not official plans.
 
-All plans are blurred on the page; the full versions are shared on WhatsApp. Replace with the developer’s official current plans before presenting them as final.
+Most plan cards are blurred on the page and full versions are shared on WhatsApp. The Nikoo landscape master plan is shown clearly because it is a public master plan; no Nikoo unit plans were supplied. Replace with the developer’s official current plans before presenting them as final.
 
 ---
 

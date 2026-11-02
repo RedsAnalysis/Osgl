@@ -1,18 +1,19 @@
-# OSGL Developers — Five-Project Portfolio
+# OSGL Developers — Six-Project Portfolio
 
 A fast, fully static, WhatsApp-first website for **OSGL Developers**, an authorised channel partner for residential projects in North Bengaluru.
 
-The site now has **five pages: one hub and four project pages**, covering **five projects** — Embassy Greenshore and Embassy Edge share the Embassy page.
+The site now has **six pages: one hub and five project pages**, covering **six projects** — Embassy Greenshore and Embassy Edge share the Embassy page.
 
 | Page | URL | Project |
 | --- | --- | --- |
-| Hub | `/` | Five-project portfolio |
+| Hub | `/` | Six-project portfolio |
 | A | `/godrej-msr-city/` | Godrej MSR City |
 | B | `/project-b/` | Embassy Greenshore & Edge |
 | C | `/project-c/` | Brigade Insignia |
 | D | `/project-d/` | TVS Emerald Altura |
+| E | `/nikoo-homes-8/` | Nikoo Homes 8 |
 
-Every project page uses the same short template: hero → quick facts → price/plans → gallery → location → WhatsApp CTA. Embassy prices are published for **Embassy Greenshore and Embassy Edge**; Brigade and TVS remain **price on request**. Godrej keeps its existing starting prices. Every CTA goes to a project-specific WhatsApp message.
+Every project page uses the same short template: hero → quick facts → price/plans → gallery → location → WhatsApp CTA. Embassy prices are published for **Embassy Greenshore and Embassy Edge**; Godrej keeps its starting prices; **Nikoo Homes 8, Brigade and TVS are price on request**. Every CTA goes to a project-specific WhatsApp message.
 
 No framework, no CMS, no build step and no backend. All enquiries go to **WhatsApp +91 89711 81288**.
 
@@ -63,22 +64,32 @@ Open <http://localhost:8080>. The project switcher, maps and WhatsApp links need
 - RERA: `PRM/KA/RERA/1251/309/PR/040426/008572`.
 - Price and possession: **on request** via WhatsApp.
 
+### E · Nikoo Homes 8 — Bhartiya Garden Enclave, Thanisandra
+- Approx. **11.35–12 acres** · **6 towers** · approx. **1,010 apartments** · **24+ row houses** · approx. **75% open space** · **40,000+ sq.ft. clubhouse**.
+- 1 BHK 786+ · 2 BHK 1,165+ · 2.5 BHK 1,326–1,377 · 3 BHK 1,610–1,777 · 3.5 BHK 2,006–2,072 · 3 BHK Loft 2,132 · 4 BHK + Staff 2,506 sq.ft.
+- Row house: 3 BHK + Study, **2,288.8 sq.ft. RERA carpet**.
+- **Price on request** — the supplied deck has no cost schedule, so no price is invented. Possession **2031, phase-wise**.
+- RERA: Phase 1 `PRM/KA/RERA/1251/309/PR/070526/008628` · Phase 2 `PRM/KA/RERA/1251/309/PR/070526/008629`.
+- Location: Bellahalli, off Thanisandra Main Road; Bhartiya City/BCIT ~7 min, Manyata ~15 min, KIA ~25 min.
+- No floor-plan PDFs were supplied; the page uses the official landscape master plan and a “floor plans on request” card.
+
 The project names, configurations, tower counts and RERA numbers were taken from the supplied brochures/brief. **Please verify every RERA number on [rera.karnataka.gov.in](https://rera.karnataka.gov.in) and confirm the final unit counts before publishing.**
 
 ---
 
 ## 3. Images and floor plans
 
-The four project pages use **developer brochure renders** supplied by the client, who confirmed permission to reuse them:
+The five project pages use **developer brochure renders** supplied by the client, who confirmed permission to reuse them:
 
 - **Embassy Greenshore:** tower/lake hero, aerial community, central-park pavilion, interior, 3 BHK/4 BHK plans and master plan from the Embassy Greenshore brochure.
 - **Brigade Insignia:** tower/garden hero, pool/clubhouse, interiors, family room, 3 BHK/4 BHK plans and master plan from the Insignia deck.
 - **TVS Emerald Altura:** tower hero, pool, grand entrance, family lifestyle, 2 BHK/3 BHK plans and master from the TVS Altura/Sathanur decks.
+- **Nikoo Homes 8:** clubhouse/pool, garden and tennis crops from the “Why Thanisandra? Why Nikoo Homes 8?” deck; landscape master plan from the supplied A3 PDF. No floor plans were supplied, so the page asks for them on WhatsApp.
 - **Godrej:** new residential community + pool hero image from Unsplash; existing representative pool/interior gallery and representative SVG plans retained.
 
 All brochure images are labelled **“Artist’s impression · representative”** and the footer carries the developer/representative-imagery disclaimer. Replace any image with an approved final render when the developer supplies one.
 
-The floor plans are **blurred** in CSS for privacy; the full plans are sent on WhatsApp. The Godrej 2/3 BHK and master plans remain representative SVG drawings, not official plans.
+Most plan cards are **blurred** for privacy; full plans are sent on WhatsApp. The Nikoo landscape master plan is shown clearly; Nikoo unit plans were not supplied, so the page has a “floor plans on request” card. The Godrej 2/3 BHK and master plans remain representative SVG drawings, not official plans.
 
 ---
 
@@ -86,11 +97,12 @@ The floor plans are **blurred** in CSS for privacy; the full plans are sent on W
 
 ```
 Osgl/
-├── index.html                     five-project hub
+├── index.html                     six-project hub
 ├── godrej-msr-city/index.html     Project A
 ├── project-b/index.html           Embassy Greenshore & Edge
 ├── project-c/index.html           Brigade Insignia
 ├── project-d/index.html           TVS Emerald Altura
+├── nikoo-homes-8/index.html       Nikoo Homes 8
 ├── 404.html
 ├── assets/
 │   ├── css/styles.css
@@ -100,7 +112,7 @@ Osgl/
 │   └── js/main.js                 switcher, mobile menu, sticky CTA bar
 ├── scripts/build-images.sh        optional image processing pipeline
 ├── robots.txt
-├── sitemap.xml                    five indexable URLs
+├── sitemap.xml                    six indexable URLs
 ├── site.webmanifest
 ├── _headers
 ├── wrangler.jsonc
@@ -108,10 +120,10 @@ Osgl/
 ```
 
 ### Navigation
-- Project switcher in the header on every page: **A Godrej · B Embassy Projects (Greenshore & Edge) · C Brigade · D TVS**.
-- Mobile menu includes all four project pages (five projects) and the on-page links.
-- Footer lists all four project pages.
-- All four project pages are indexable and included in `sitemap.xml`; the old placeholder `noindex` has been removed.
+- Project switcher in the header on every page: **A Godrej · B Embassy Projects (Greenshore & Edge) · C Brigade · D TVS · E Nikoo Homes 8**.
+- Mobile menu includes all five project pages (six projects) and the on-page links.
+- Footer lists all five project pages.
+- All five project pages are indexable and included in `sitemap.xml`; the old placeholder `noindex` has been removed.
 
 ### Enquiry routing
 Every enquiry link is a `wa.me` link to **+91 89711 81288** with a message naming the project. This includes header, hero, quick strip, price rows, plan cards, location, final CTA, footer and mobile/float buttons. There is no form and no server-side data collection.
@@ -130,7 +142,7 @@ The Worker is configured in `wrangler.jsonc` as `osgl` with static assets. Add `
 
 After deploying:
 - Purge the Cloudflare cache.
-- Test all five pages and every WhatsApp link on a phone.
+- Test all six pages and every WhatsApp link on a phone.
 - Submit `https://osgldevelopers.com/sitemap.xml` in Google Search Console.
 
 ---
@@ -141,8 +153,9 @@ After deploying:
 - **Embassy:** Greenshore 288-acre township, 14-acre enclave, 8 towers, 878 homes, 3.6-acre park; verify the updated price table, CLPP, possession 31-Dec-2031, RERA `PRM/KA/RERA/1250/303/PR/201125/008265`; Edge prices/20:80 and RERA-on-request wording.
 - **Brigade:** 430 homes (from the brief, not explicit in the deck), 3B+S+18 floors, unit sizes, RERA `PRM/KA/RERA/1251/309/PR/180524/006894`. Price/offer and possession to be confirmed on WhatsApp only.
 - **TVS:** 10.06 acres, 12 towers, 975 homes, 2B+G+12, 29,000+ sq.ft. clubhouses, unit sizes, RERA `PRM/KA/RERA/1251/309/PR/040426/008572`.
+- **Nikoo Homes 8:** approx. 11.35–12 acres, 6 towers, 1,010 apartments, 24+ row houses, configs/sizes, 2031 phase-wise possession, two RERA numbers. The supplied deck has **no price schedule and no floor plans**; the page says “on request” and uses the supplied master plan only. Verify acreage/unit count with the developer before publishing.
 - **Images:** confirm each developer’s current approval for web use; all renders are artist’s impressions.
-- **Prices:** Embassy Greenshore and Edge are published; Brigade and TVS are deliberately “Price on request”. If a price changes, update the price table, disclaimers and JSON-LD together.
+- **Prices:** Embassy Greenshore and Edge are published; Nikoo Homes 8, Brigade and TVS are deliberately “Price on request”. If a price changes, update the price table, disclaimers and JSON-LD together.
 
 ---
 
